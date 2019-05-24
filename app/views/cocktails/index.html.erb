@@ -4,13 +4,11 @@
     <p>Nice cocktails, for nice people.</p>
   </div>
 </div>
-<div class="container">
   <div class="card">
-    <h2><% @cocktails.each do |cocktail| %>
-    <p class="card-category"><%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+    <% @cocktails.each do |cocktail| %>
+    <div class="card-category"><%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+    </div>
       <% end %>
-    </p>
-    </h2>
-  </div>
-  <%= link_to 'Create cocktail', new_cocktail_path %>
+
 </div>
+  <%= link_to 'Create cocktail', new_cocktail_path %>
